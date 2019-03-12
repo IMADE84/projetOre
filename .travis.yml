@@ -9,6 +9,7 @@ install:
  - bundle install 
  - pip install --user html5validator
 
+
 script: bundle exec jekyll build && html5validator --root _site/
 
 sudo: false
