@@ -8,6 +8,6 @@ jdk:
 install:
  - pip install --user html5validator
  
-script: jekyll build  &&  html5validator --root _site/
+script: bundle exec jekyll serve && html5validator --root _site/
 
 sudo: false
