@@ -2,14 +2,16 @@ language: ruby
 rvm:
   - 2.6.0
 
-jdk:
- - oraclejdk8  
 
 install:
  - bundle install 
  - pip install --user html5validator
 
+script: 
+  
+  - bundle exec jekyll build  
+  - htmlproofer --disable-external --allow-hash-href ./_site
+  - html5validator --root _site/
 
-script: bundle exec jekyll build && html5validator --root _site/
 
 sudo: false
