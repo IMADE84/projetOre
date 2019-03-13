@@ -2,7 +2,9 @@ language: ruby
 rvm:
   - 2.6.0
 
-
+jdk:
+ - oraclejdk8  
+ 
 install:
  - bundle install 
  - pip install --user html5validator
